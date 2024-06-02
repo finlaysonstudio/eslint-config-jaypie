@@ -27,6 +27,7 @@ module.exports = {
 
 | Date       | Version | Summary        |
 | ---------- | ------- | -------------- |
+|   6/2/2024 |   0.1.0 | Initial deploy |
 |   6/2/2024 |   0.0.1 | Initial commit |
 
 ## 📜 License
