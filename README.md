@@ -2,21 +2,26 @@
 
 Linting rules for Jaypie projects
 
+## 🎯 Goals
+
+Jaypie ecosystem coding style, Prettier, and bespoke rules found to improve development
+
 ## 📋 Usage
 
 ### Installation
 
 ```bash
-npm install eslint-config-jaypie
+npm install --save-dev eslint-config-jaypie
 ```
 
 ### Configuration
 
-TODO: Example should include one trivial and possibly one thorough example of using the library
-
-## 📖 Reference
-
-TODO: Reference should be a complete list of everything in the package
+```javascript
+// .eslintrc.js
+module.exports = {
+  extends: ["jaypie"],
+};
+```
 
 ## 📝 Changelog
 
