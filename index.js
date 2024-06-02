@@ -13,7 +13,7 @@ module.exports = {
       files: ["__tests__/**", "**/*.spec.js", "**/*.test.js"],
       plugins: ["vitest"],
       rules: {
-        "vitest/no-focused-tests": "error",
+        "vitest/no-focused-tests": ["error", { fixable: false }],
         "vitest/no-disabled-tests": "warn",
       },
     },
@@ -32,6 +32,9 @@ module.exports = {
   rules: {
     "import/extensions": ["error", "ignorePackages"],
     "import/no-commonjs": "error",
+    "import/no-unresolved": ["error"],
     "no-console": "warn",
+    "no-shadow": "error",
+    "object-shorthand": ["error", "always"],
   }
 };
