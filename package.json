@@ -1,0 +1,14 @@
+{
+  "name": "eslint-config-jaypie",
+  "version": "0.0.1",
+  "author": "Finlayson Studio",
+  "scripts": {
+    "format:package": "sort-package-json ./package.json",
+    "init:deploy": "hygen jaypie workflow-npm",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "hygen": "^6.2.11",
+    "sort-package-json": "^2.10.0"
+  }
+}
