@@ -7,6 +7,13 @@
     "init:deploy": "hygen jaypie workflow-npm",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-vitest": "^0.5.4"
+  },
   "devDependencies": {
     "hygen": "^6.2.11",
     "sort-package-json": "^2.10.0"
