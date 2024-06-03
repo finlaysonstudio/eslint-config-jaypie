@@ -36,5 +36,5 @@ module.exports = {
     "no-console": "warn",
     "no-shadow": "error",
     "object-shorthand": ["error", "always"],
-  }
+  },
 };
