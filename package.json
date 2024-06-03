@@ -6,7 +6,8 @@
   "scripts": {
     "format:package": "sort-package-json ./package.json",
     "init:deploy": "hygen jaypie workflow-npm",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest",
+    "test:spec:index": "vitest run ./index.spec.js"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
