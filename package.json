@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-jaypie",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Finlayson Studio",
   "main": "index.js",
   "scripts": {
