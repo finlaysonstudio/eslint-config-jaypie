@@ -34,7 +34,16 @@ module.exports = {
     "import/no-commonjs": "error",
     "import/no-unresolved": ["error"],
     "no-console": "warn",
+    "no-fallthrough": "error",
+    "no-param-reassign": "error",
     "no-shadow": "error",
+    "no-shadow-restricted-names": "error",
+    "no-unused-vars": "warn",
+    "no-use-before-define": [
+      "error",
+      { functions: true, classes: true, variables: true },
+    ],
     "object-shorthand": ["error", "always"],
+    "prefer-const": "warn",
   },
 };
