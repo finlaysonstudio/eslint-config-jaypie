@@ -19,12 +19,6 @@ module.exports = {
       },
     },
     {
-      files: ["_templates/jaypie/**"],
-      rules: {
-        "no-param-reassign": "off",
-      },
-    },
-    {
       files: ["*.cjs"],
       rules: {
         "import/no-commonjs": "off",
@@ -39,10 +33,9 @@ module.exports = {
   rules: {
     "import/extensions": ["error", "ignorePackages"],
     "import/no-commonjs": "off",
-    "import/no-unresolved": ["error"],
+    "import/no-unresolved": ["error", { ignore: ["^csv-stringify/sync$"] }],
     "no-console": "warn",
     "no-fallthrough": "error",
-    "no-param-reassign": "error",
     "no-restricted-syntax": [
       "error",
       "ExportNamedDeclaration",

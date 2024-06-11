@@ -32,10 +32,9 @@ module.exports = {
   rules: {
     "import/extensions": ["error", "ignorePackages"],
     "import/no-commonjs": "error",
-    "import/no-unresolved": ["error"],
+    "import/no-unresolved": ["error", { ignore: ["^csv-stringify/sync$"] }],
     "no-console": "warn",
     "no-fallthrough": "error",
-    "no-param-reassign": "error",
     "no-shadow": "error",
     "no-shadow-restricted-names": "error",
     "no-unused-vars": "warn",
