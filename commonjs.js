@@ -19,6 +19,12 @@ module.exports = {
       },
     },
     {
+      files: ["_templates/jaypie/**"],
+      rules: {
+        "no-param-reassign": "off",
+      },
+    },
+    {
       files: ["*.cjs"],
       rules: {
         "import/no-commonjs": "off",
