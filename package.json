@@ -29,5 +29,8 @@
     "eslint-plugin-prettier-vue": "^5.0.0",
     "eslint-plugin-vitest": "^0.5.4",
     "eslint-plugin-vue": "^9.26.0"
+  },
+  "dependencies": {
+    "eslint-plugin-no-autofix": "^2.0.0"
   }
 }
