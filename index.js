@@ -43,6 +43,6 @@ module.exports = {
       { functions: true, classes: true, variables: true },
     ],
     "object-shorthand": ["error", "always"],
-    "prefer-const": "warn",
+    "prefer-const": ["warn", { fixable: false }],
   },
 };
