@@ -29,11 +29,12 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["prettier"],
+  plugins: ["no-autofix", "prettier"],
   rules: {
     "import/extensions": ["error", "ignorePackages"],
     "import/no-commonjs": "off",
     "import/no-unresolved": ["error", { ignore: ["^csv-stringify/sync$"] }],
+    "no-autofix/prefer-const": "warn",
     "no-console": "warn",
     "no-fallthrough": "error",
     "no-restricted-syntax": [
@@ -51,6 +52,5 @@ module.exports = {
       { functions: true, classes: true, variables: true },
     ],
     "object-shorthand": ["error", "always"],
-    "prefer-const": "warn",
   },
 };
