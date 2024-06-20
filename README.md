@@ -45,6 +45,7 @@ module.exports = {
 
 | Date       | Version | Summary        |
 | ---------- | ------- | -------------- |
+|  6/19/2024 |   1.0.6 | Adds `vue/` subdirectory support |
 |   6/3/2024 |   1.0.0 | Initial release |
 |   6/2/2024 |   0.1.0 | Initial deploy |
 |   6/2/2024 |   0.0.1 | Initial commit |
