@@ -23,6 +23,28 @@ module.exports = {
         "import/no-commonjs": "off",
       },
     },
+    {
+      files: ["*.vue"],
+      extends: ["plugin:vue/vue3-essential", "plugin:prettier-vue/recommended"],
+      rules: {
+        "import/extensions": "off",
+        "prettier/prettier": "off",
+      },
+    },
+    {
+      files: ["vue/**/*.js", "vue/**/*.vue", "*.js"],
+      rules: {
+        "import/extensions": "off",
+      },
+      settings: {
+        "import/resolver": {
+          alias: {
+            extensions: [".js", ".vue"],
+            map: [["@", "./vue/src"]],
+          },
+        },
+      },
+    },
   ],
   parserOptions: {
     ecmaVersion: "latest",
