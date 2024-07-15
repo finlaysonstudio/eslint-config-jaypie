@@ -8,6 +8,7 @@ module.exports = {
     "plugin:import/errors",
     "plugin:prettier/recommended",
   ],
+  ignorePatterns: ["**/dist/**", "dist/"],
   overrides: [
     {
       files: ["__tests__/**", "**/*.spec.js", "**/*.test.js"],
