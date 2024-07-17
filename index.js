@@ -33,7 +33,7 @@ module.exports = {
       },
     },
     {
-      files: ["vue/**/*.js", "vue/**/*.vue", "*.js"],
+      files: ["vue/**/*.js", "vue/**/*.vue"],
       rules: {
         "import/extensions": "off",
       },
