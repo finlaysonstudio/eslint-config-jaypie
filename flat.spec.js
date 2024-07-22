@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 
 // Subject
-import flat from "./flat.js";
+import flat from "./flat.mjs";
 
 //
 //

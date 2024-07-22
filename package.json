@@ -5,7 +5,7 @@
   "main": "index.js",
   "exports": {
     ".": "./index.js",
-    "./flat": "./flat.js"
+    "./flat": "./flat.mjs"
   },
   "scripts": {
     "format:package": "sort-package-json ./package.json",
