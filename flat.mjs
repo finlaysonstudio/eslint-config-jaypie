@@ -32,7 +32,6 @@ export default [
   {
     rules: {
       "import/extensions": ["error", "ignorePackages"],
-      "import/no-commonjs": "error",
       "import/no-unresolved": ["error", { ignore: ["^csv-stringify/sync$"] }],
       "no-autofix/prefer-const": "warn",
       "no-console": "warn",
@@ -45,6 +44,22 @@ export default [
         { functions: true, classes: true, variables: true },
       ],
       "object-shorthand": ["error", "always"],
+      "no-restricted-syntax": [
+        "error",
+        {
+          selector: "CallExpression[callee.name='require']",
+          message: "Unexpected require, use import instead.",
+        },
+        {
+          selector:
+            "MemberExpression[object.name='module'][property.name='exports']",
+          message: "Unexpected module.exports, use export instead.",
+        },
+        {
+          selector: "MemberExpression[object.name='exports']",
+          message: "Unexpected exports, use export instead.",
+        },
+      ],
     },
   },
   {
@@ -69,8 +84,26 @@ export default [
   },
   {
     files: ["**/*.cjs"],
+    languageOptions: {
+      ecmaVersion: "latest",
+      sourceType: "script",
+    },
     rules: {
-      "import/no-commonjs": "off",
+      "no-restricted-syntax": [
+        "error",
+        {
+          selector: "ImportDeclaration",
+          message: "Unexpected import, use require instead.",
+        },
+        {
+          selector: "ExportNamedDeclaration",
+          message: "Unexpected export, use module.exports instead.",
+        },
+        {
+          selector: "ExportDefaultDeclaration",
+          message: "Unexpected export, use module.exports instead.",
+        },
+      ],
     },
   },
   {
@@ -85,7 +118,20 @@ export default [
     },
   },
   {
-    files: ["vue/**/*.js", "vue/**/*.mjs", "vue/**/*.vue"],
+    files: [
+      "packages/*-vue/**/*.js",
+      "packages/*-vue/**/*.mjs",
+      "packages/*-vue/**/*.vue",
+      "packages/vue/**/*.js",
+      "packages/vue/**/*.mjs",
+      "packages/vue/**/*.vue",
+      "packages/vue-*/**/*.js",
+      "packages/vue-*/**/*.mjs",
+      "packages/vue-*/**/*.vue",
+      "vue/**/*.js",
+      "vue/**/*.mjs",
+      "vue/**/*.vue",
+    ],
     rules: {
       "import/extensions": "off",
     },
@@ -96,7 +142,6 @@ export default [
           map: [["@", "./vue/src"]],
         },
       },
-      "import/no-unresolved": ["error", { ignore: ["unplugin-.*/vite"] }],
     },
   },
 ];
