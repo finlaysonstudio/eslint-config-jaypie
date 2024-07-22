@@ -4,6 +4,7 @@ _templates
 .github
 .jaypie
 .vscode
+package-lock.json
 rollup.config.js
 test
 testSetup.js
