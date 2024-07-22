@@ -3,11 +3,16 @@
   "version": "1.0.9",
   "author": "Finlayson Studio",
   "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./flat": "./flat.js"
+  },
   "scripts": {
     "format:package": "sort-package-json ./package.json",
     "lint": "eslint .",
     "test": "vitest",
-    "test:spec:index": "vitest run ./index.spec.js"
+    "test:spec:index": "vitest run ./index.spec.js",
+    "test:spec:flat": "vitest run ./flat.spec.js"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
