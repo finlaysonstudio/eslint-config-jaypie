@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-syntax */
 import js from "@eslint/js";
 import pluginImport from "eslint-plugin-import";
 import pluginNoAutofix from "eslint-plugin-no-autofix";
