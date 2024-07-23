@@ -1,0 +1,39 @@
+name: NPM Check
+
+on:
+  push:
+    branches:
+      - fix/*
+      - feat/*
+    tags:
+      - check-*
+
+env:
+  NPM_INSTALL_FLAGS: --force
+  PROJECT_ENV: meta
+  PROJECT_SERVICE: libraries
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - run: npm install ${{ env.NPM_INSTALL_FLAGS }}
+    - run: npm run build
+    - run: npm run lint
+  test:
+    name: Unit Test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+    steps:
+    - uses: actions/checkout@v4
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm install ${{ env.NPM_INSTALL_FLAGS }}
+    - run: npm run test
