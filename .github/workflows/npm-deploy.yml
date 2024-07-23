@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npm install {{ env.NPM_INSTALL_FLAGS }}
+      - run: npm install ${{ env.NPM_INSTALL_FLAGS }}
       - name: NPM Deploy
         run: |
           npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npm install {{ env.NPM_INSTALL_FLAGS }}
+      - run: npm install ${{ env.NPM_INSTALL_FLAGS }}
       - run: npm run lint
   test:
     name: Unit Test (in parallel)
@@ -45,5 +45,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm install {{ env.NPM_INSTALL_FLAGS }}
+    - run: npm install ${{ env.NPM_INSTALL_FLAGS }}
     - run: npm test
